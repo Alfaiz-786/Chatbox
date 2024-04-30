@@ -10,7 +10,7 @@ const useLogout = () => {
 		setLoading(true);
 		try {
 			const res = await fetch(
-        "https://chatboxserver.vercel.app/api/auth/logout",
+        "https://chatbox-jbw9-h2ygqwv0g-alfaizs-projects.vercel.app/api/auth/logout",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

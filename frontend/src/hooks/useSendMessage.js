@@ -10,7 +10,7 @@ const useSendMessage = () => {
 		setLoading(true);
 		try {
 			const res = await fetch(
-        `https://chatboxserver.vercel.app/api/messages/send/${selectedConversation._id}`,
+        `https://chatbox-jbw9-h2ygqwv0g-alfaizs-projects.vercel.app/api/messages/send/${selectedConversation._id}`,
         {
           method: "POST",
           headers: {

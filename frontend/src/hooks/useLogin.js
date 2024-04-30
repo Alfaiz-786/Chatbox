@@ -12,7 +12,7 @@ const useLogin = () => {
 		setLoading(true);
 		try {
 			const res = await fetch(
-        "https://chatboxserver.vercel.app/api/auth/login",
+        "https://chatbox-jbw9-h2ygqwv0g-alfaizs-projects.vercel.app/api/auth/login",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

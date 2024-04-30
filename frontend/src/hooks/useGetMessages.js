@@ -11,7 +11,7 @@ const useGetMessages = () => {
 			setLoading(true);
 			try {
 				const res = await fetch(
-          `https://chatboxserver.vercel.app/api/messages/${selectedConversation._id}`
+          `https://chatbox-jbw9-h2ygqwv0g-alfaizs-projects.vercel.app/api/messages/${selectedConversation._id}`
         );
 				const data = await res.json();
 				if (data.error) throw new Error(data.error);

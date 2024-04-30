@@ -9,7 +9,9 @@ const useGetConversations = () => {
 		const getConversations = async () => {
 			setLoading(true);
 			try {
-				const res = await fetch("https://chatboxserver.vercel.app/api/users");
+				const res = await fetch(
+          "https://chatbox-jbw9-h2ygqwv0g-alfaizs-projects.vercel.app/api/users"
+        );
 				const data = await res.json();
 				if (data.error) {
 					throw new Error(data.error);

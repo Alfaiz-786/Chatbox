@@ -15,11 +15,14 @@ export const SocketContextProvider = ({ children }) => {
 
   useEffect(() => {
     if (authUser) {
-      const socket = io("https://chatboxserver.vercel.app/", {
-        query: {
-          userId: authUser._id,
-        },
-      });
+      const socket = io(
+        "https://chatbox-jbw9-h2ygqwv0g-alfaizs-projects.vercel.app/",
+        {
+          query: {
+            userId: authUser._id,
+          },
+        }
+      );
 
       setSocket(socket);
 
