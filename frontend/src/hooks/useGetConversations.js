@@ -2,31 +2,31 @@ import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 
 const useGetConversations = () => {
-	const [loading, setLoading] = useState(false);
-	const [conversations, setConversations] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [conversations, setConversations] = useState([]);
 
-	useEffect(() => {
-		const getConversations = async () => {
-			setLoading(true);
-			try {
-				const res = await fetch(
-          "https://chatbox-jbw9-h2ygqwv0g-alfaizs-projects.vercel.app/api/users"
+  useEffect(() => {
+    const getConversations = async () => {
+      setLoading(true);
+      try {
+        const res = await fetch(
+          "https://chatbox-backend-1xq1.onrender.com/api/users"
         );
-				const data = await res.json();
-				if (data.error) {
-					throw new Error(data.error);
-				}
-				setConversations(data);
-			} catch (error) {
-				toast.error(error.message);
-			} finally {
-				setLoading(false);
-			}
-		};
+        const data = await res.json();
+        if (data.error) {
+          throw new Error(data.error);
+        }
+        setConversations(data);
+      } catch (error) {
+        toast.error(error.message);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-		getConversations();
-	}, []);
+    getConversations();
+  }, []);
 
-	return { loading, conversations };
+  return { loading, conversations };
 };
 export default useGetConversations;
