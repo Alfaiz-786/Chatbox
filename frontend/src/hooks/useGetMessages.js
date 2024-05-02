@@ -11,7 +11,8 @@ const useGetMessages = () => {
       setLoading(true);
       try {
         const res = await fetch(
-          `https://chatbox-backend-1xq1.onrender.com/api/messages/${selectedConversation._id}`
+          // `https://chatbox-backend-1xq1.onrender.com/api/messages/${selectedConversation._id}`
+          `/api/messages/${selectedConversation._id}`
         );
         const data = await res.json();
         if (data.error) throw new Error(data.error);

@@ -25,7 +25,8 @@ const useSignup = () => {
     setLoading(true);
     try {
       const res = await fetch(
-        "https://chatbox-backend-1xq1.onrender.com/api/auth/signup",
+        // "https://chatbox-backend-1xq1.onrender.com/api/auth/signup",
+        "/api/auth/signup",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

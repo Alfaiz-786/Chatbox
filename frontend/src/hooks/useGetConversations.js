@@ -10,7 +10,8 @@ const useGetConversations = () => {
       setLoading(true);
       try {
         const res = await fetch(
-          "https://chatbox-backend-1xq1.onrender.com/api/users"
+          // "https://chatbox-backend-1xq1.onrender.com/api/users"
+          "/api/users"
         );
         const data = await res.json();
         if (data.error) {

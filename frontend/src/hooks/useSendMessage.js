@@ -10,7 +10,8 @@ const useSendMessage = () => {
     setLoading(true);
     try {
       const res = await fetch(
-        `https://chatbox-backend-1xq1.onrender.com/api/messages/send/${selectedConversation._id}`,
+        // `https://chatbox-backend-1xq1.onrender.com/api/messages/send/${selectedConversation._id}`,
+        `/api/messages/send/${selectedConversation._id}`,
         {
           method: "POST",
           headers: {

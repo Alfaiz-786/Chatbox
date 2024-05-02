@@ -10,7 +10,8 @@ const useLogout = () => {
     setLoading(true);
     try {
       const res = await fetch(
-        "https://chatbox-backend-1xq1.onrender.com/api/auth/logout",
+        // "https://chatbox-backend-1xq1.onrender.com/api/auth/logout",
+        "/api/auth/logout",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
